@@ -50,7 +50,7 @@
         <div class="row pt-5">
           <div class="col-12 text-center">
             <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-            <h1 class="site-logo"><a href="index.html">{{$appname}}</a></h1>
+            <h1 class="site-logo"><a href="/">{{$appname}}</a></h1>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
                 <a class="nav-link" href="/post">Poster</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact">Contact</a>
+                <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
             
@@ -90,7 +90,7 @@
 
             <div class="owl-carousel owl-theme home-slider">
               <div>
-                <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('images/img_1.jpg'); ">
+                <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('images/img_1.jpg'); ">
                   <div class="text half-to-full">
                     <div class="post-meta">
                       <span class="category">Daniel Assani</span>
@@ -103,7 +103,7 @@
                 </a>
               </div>
               <div>
-                <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('images/img_2.jpg'); ">
+                <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('images/img_2.jpg'); ">
                   <div class="text half-to-full">
                     <div class="post-meta">
                       <span class="category">Daniel Assani</span>
@@ -116,7 +116,7 @@
                 </a>
               </div>
               <div>
-                <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('images/img_3.jpg'); ">
+                <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('images/img_3.jpg'); ">
                   <div class="text half-to-full">
                    <div class="post-meta">
                       <span class="category">Daniel Assani</span>
@@ -166,7 +166,7 @@
               <div class="col-md-12">
   @foreach ($data as $article)
                 <div class="post-entry-horzontal">
-                  <a href="blog-single.html">
+                  <a href="#">
                     <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url(images/img_10.jpg);"></div>
                     <span class="text">
                       <div class="post-meta">
@@ -205,7 +205,7 @@
             <!-- END sidebar-box -->
             <div class="sidebar-box">
               <div class="bio text-center">
-                <img src="images/person_1.jpg" alt="Image Placeholder" class="img-fluid">
+                <img src="images/on.jpeg" alt="Image Placeholder" class="img-fluid">
                 <div class="bio-body">
                   <h2>Daniel Assani</h2>
                   <p>Developper web Backend</p>
@@ -289,13 +289,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </div>
         </div>
       </div>

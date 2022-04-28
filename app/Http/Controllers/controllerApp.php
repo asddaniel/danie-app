@@ -21,7 +21,7 @@ class controllerApp extends Controller{
 private function getting_data(){
     
     $this->article = new Article();
-     return   $this->article->get();// DB::select('select * from article');
+     return   $this->article->get();
 }
     public function post_article(){
         return view("ajout_article", ['name'=>"ajout article"]);
@@ -47,5 +47,11 @@ private function getting_data(){
     public function contact(){
         return view("contact");
     }
-   
+    private function transform($data){
+        $donnees = array();
+       foreach ($data as $key => $value) {
+           array_push($donnees, $value);
+       }
+       return $donnees;
+    }
 }

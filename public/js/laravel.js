@@ -18,6 +18,7 @@ form.addEventListener("submit", function(e){
 			return response.text();
 		}).then(function(data){
 			console.log(data);
+			window.location.href="http://localhost:8000";
 		})
 	}
 })

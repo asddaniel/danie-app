@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controllerApp;
 use App\Http\Controllers\ArticleController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,13 @@ Route::controller(controllerApp::class)->group(function () {
     Route::post("add_article", "add_article")->middleware('auth');
 
 });
+
+Route::get('/users/{user}', function (User $user) {
+    return $user->email;
+});
+// Route::get('/user/{name?}', function ($name = 'John') {
+//     return $name;
+// })->whereAlphaNumeric('name');
 Route::get('/token', function (Request $request) {
     $token = $request->session()->token();
  

@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 Route::get('/', [controllerApp::class, 'index'])->name("accueil");
+Route::get('/mail', [controllerApp::class, 'mail'])->name("mail");
 Route::controller(controllerApp::class)->group(function () {
     Route::get('/about', 'about');
     Route::post('/donnees', 'data');
@@ -35,6 +36,9 @@ Route::controller(controllerApp::class)->group(function () {
 Route::get('/users/{user}', function (User $user) {
     return $user->email;
 });
+
+
+
 // Route::get('/user/{name?}', function ($name = 'John') {
 //     return $name;
 // })->whereAlphaNumeric('name');

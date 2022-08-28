@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use  App\Http\Controllers\ArticleController;
 use  App\Models\Article;
+use App\Mail\Testmail;
 class controllerApp extends Controller{
     //
  private $app_name;
@@ -24,6 +27,9 @@ private function getting_data(){
      return   $this->article->get();
 }
     public function post_article(){
+        if(!Gate::allows("access-admin")){
+            abort("403");
+        }
         return view("ajout_article", ['name'=>"ajout article"]);
     }
      public function single(){
@@ -37,6 +43,10 @@ private function getting_data(){
     }
     public function login(){
         return view("login", ['name'=>"login"]);
+    }
+    public function mail(){
+           Mail::to("devasddaniel@gmail.com")->send(new Testmail());
+           return "mail envoyé";
     }
     public function categorie(){
         return view("category");
